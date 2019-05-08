@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +55,81 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\Autores\FrmAlteraAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Autores\FrmAlteraAutor.Designer.cs">
+      <DependentUpon>FrmAlteraAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Autores\FrmAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Autores\FrmAutor.Designer.cs">
+      <DependentUpon>FrmAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Autores\FrmNovoAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Autores\FrmNovoAutor.Designer.cs">
+      <DependentUpon>FrmNovoAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Generos\FrmAlteraGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Generos\FrmAlteraGenero.Designer.cs">
+      <DependentUpon>FrmAlteraGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Generos\FrmGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Generos\FrmGenero.Designer.cs">
+      <DependentUpon>FrmGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Generos\FrmNovoGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Generos\FrmNovoGenero.Designer.cs">
+      <DependentUpon>FrmNovoGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Livros\FrmAlteraLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Livros\FrmAlteraLivro.Designer.cs">
+      <DependentUpon>FrmAlteraLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Livros\FrmLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Livros\FrmLivro.Designer.cs">
+      <DependentUpon>FrmLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Livros\FrmNovoLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Livros\FrmNovoLivro.Designer.cs">
+      <DependentUpon>FrmNovoLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Localizacao\FrmAlteraLocalizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Localizacao\FrmAlteraLocalizacao.Designer.cs">
+      <DependentUpon>FrmAlteraLocalizacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Localizacao\FrmLocalizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Localizacao\FrmLocalizacao.Designer.cs">
+      <DependentUpon>FrmLocalizacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Localizacao\FrmNovoLocalizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Localizacao\FrmNovoLocalizacao.Designer.cs">
+      <DependentUpon>FrmNovoLocalizacao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +139,42 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\Autores\FrmAlteraAutor.resx">
+      <DependentUpon>FrmAlteraAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Autores\FrmAutor.resx">
+      <DependentUpon>FrmAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Autores\FrmNovoAutor.resx">
+      <DependentUpon>FrmNovoAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Generos\FrmAlteraGenero.resx">
+      <DependentUpon>FrmAlteraGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Generos\FrmGenero.resx">
+      <DependentUpon>FrmGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Generos\FrmNovoGenero.resx">
+      <DependentUpon>FrmNovoGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Livros\FrmAlteraLivro.resx">
+      <DependentUpon>FrmAlteraLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Livros\FrmLivro.resx">
+      <DependentUpon>FrmLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Livros\FrmNovoLivro.resx">
+      <DependentUpon>FrmNovoLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Localizacao\FrmAlteraLocalizacao.resx">
+      <DependentUpon>FrmAlteraLocalizacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Localizacao\FrmLocalizacao.resx">
+      <DependentUpon>FrmLocalizacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Localizacao\FrmNovoLocalizacao.resx">
+      <DependentUpon>FrmNovoLocalizacao.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +187,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="controle\" />
+    <Folder Include="modelo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
