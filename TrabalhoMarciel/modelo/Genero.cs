@@ -10,5 +10,7 @@ namespace TrabalhoMarciel.modelo
     {
         public int gencodigo { get; set; }
         public string gennome { get; set; }
+
+        public string toString() => gennome;
     }
 }

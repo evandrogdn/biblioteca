@@ -10,5 +10,7 @@ namespace TrabalhoMarciel.modelo
     {
         public int autcodigo { get; set; }
         public string autnome { get; set; }
+
+        public string toString() => autnome;
     }
 }

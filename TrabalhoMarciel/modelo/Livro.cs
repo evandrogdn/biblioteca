@@ -12,6 +12,8 @@ namespace TrabalhoMarciel.modelo
         public string livnome { get; set; }
         public int genero { get; set; }
         public int localizacao { get; set;}
+
+        public string toString() => livnome;
     }
 }
 
