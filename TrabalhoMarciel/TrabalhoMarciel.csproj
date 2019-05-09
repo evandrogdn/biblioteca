@@ -53,6 +53,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelo\Autor.cs" />
+    <Compile Include="modelo\Genero.cs" />
+    <Compile Include="modelo\Livro.cs" />
+    <Compile Include="modelo\Localizacao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="view\Autores\FrmAlteraAutor.cs">
@@ -190,7 +194,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="controle\" />
-    <Folder Include="modelo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
