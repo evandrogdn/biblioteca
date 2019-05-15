@@ -17,7 +17,7 @@ namespace TrabalhoMarciel.controle
             try
             {
                 // Criando o objeto com a url de conexão passando por parametro os dados para a conexao com o banco de dados
-                conexao = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=financeiro;");
+                conexao = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=biblioteca;");
                 //Abrindo a conexão para o objeto tendo assim uma conexao ativa com o banco de dados
                 conexao.Open();
             }
