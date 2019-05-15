@@ -16,18 +16,3 @@ namespace TrabalhoMarciel.modelo
         public string toString() => livnome;
     }
 }
-
-/**
- * override
- * public string toString
- *  return nome
- */ 
-
-    /**
-     * Estado estado = (Estado)combobox1.SelectedItem
-     */ 
-
-/**
- * ArrayList lista = EstadoDB.getEstados()
- * Combobox.DataSource = lista
- */
