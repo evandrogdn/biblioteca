@@ -9,15 +9,15 @@ using TrabalhoMarciel.modelo;
 
 namespace TrabalhoMarciel.controle
 {
-    public class AutorDB
+    public class GeneroDB
     {
-        public static ArrayList getAutors(NpgsqlConnection conexao)
+        public static ArrayList getGeneros(NpgsqlConnection conexao)
         {
             ArrayList lista = new ArrayList();
 
             try
             {
-                string sql = "select * from tbautor order by autcodigo;";
+                string sql = "select * from tbgenero order by gencodigo;";
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = conexao;
                 cmd.CommandText = sql;
@@ -25,13 +25,13 @@ namespace TrabalhoMarciel.controle
 
                 while (dr.Read())
                 {
-                    int autcodigo = (int)dr["autcodigo"];
-                    string autnome = (string)dr["autnome"];
+                    int gencodigo = (int)dr["gencodigo"];
+                    string gennome = (string)dr["gennome"];
 
-                    Autor Autor = new Autor();
-                    Autor.autcodigo = autcodigo;
-                    Autor.autnome = autnome;
-                    lista.Add(Autor);
+                    Genero genero = new Genero();
+                    genero.gencodigo = gencodigo;
+                    genero.gennome = gennome;
+                    lista.Add(genero);
                 }
 
                 dr.Close();
@@ -44,17 +44,17 @@ namespace TrabalhoMarciel.controle
             return lista;
         }
 
-        public static bool setIncluiAutor(NpgsqlConnection conexao, Autor autor)
+        public static bool setIncluiGenero(NpgsqlConnection conexao, Genero genero)
         {
             bool incluiu = false;
 
             try
             {
-                string sql = "insert into tbautor (autnome) values (@autnome);";
+                string sql = "insert into tbgenero (gennome) values (@gennome);";
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = conexao;
                 cmd.CommandText = sql;
-                cmd.Parameters.Add("@autnome", NpgsqlTypes.NpgsqlDbType.Varchar).Value = autor.autnome;
+                cmd.Parameters.Add("@gennome", NpgsqlTypes.NpgsqlDbType.Varchar).Value = genero.gennome;
 
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1) incluiu = true;
@@ -67,17 +67,17 @@ namespace TrabalhoMarciel.controle
             return incluiu;
         }
 
-        public static bool setExcluiAutor(NpgsqlConnection conexao, int autcodigo)
+        public static bool setExcluiGenero(NpgsqlConnection conexao, int gencodigo)
         {
             bool excluiu = false;
 
             try
             {
-                string sql = "delete from tbautor where autcodigo = @autcodigo;";
+                string sql = "delete from tbgenero where gencodigo = @gencodigo;";
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = conexao;
                 cmd.CommandText = sql;
-                cmd.Parameters.Add("@autcodigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = autcodigo;
+                cmd.Parameters.Add("@gencodigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = gencodigo;
 
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1) excluiu = true;
@@ -90,18 +90,18 @@ namespace TrabalhoMarciel.controle
             return excluiu;
         }
 
-        public static bool setAlteraAutor(NpgsqlConnection conexao, Autor autor)
+        public static bool setAlteraGenero(NpgsqlConnection conexao, Genero genero)
         {
             bool alterou = false;
 
             try
             {
-                string sql = "update tbautor set autnome = @autnome where autcodigo = @autcodigo;";
+                string sql = "update tbgenero set gennome = @gennome where gencodigo = @gencodigo;";
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = conexao;
                 cmd.CommandText = sql;
-                cmd.Parameters.Add("@autcodigo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = autor.autcodigo;
-                cmd.Parameters.Add("@autnome", NpgsqlTypes.NpgsqlDbType.Varchar).Value = autor.autnome;
+                cmd.Parameters.Add("@autcodigo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = genero.gencodigo;
+                cmd.Parameters.Add("@gencodigo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = genero.gennome;
 
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1) alterou = true;
@@ -114,17 +114,17 @@ namespace TrabalhoMarciel.controle
             return alterou;
         }
 
-        public static Autor getAutor(NpgsqlConnection conexao, int autcodigo)
+        public static Genero getGenero(NpgsqlConnection conexao, int autcodigo)
         {
-            Autor autor = new Autor();
+            Genero genero = new Genero();
 
             try
             {
-                string sql = "select * from tbautor where autcodigo = @autcodigo;";
+                string sql = "select * from tbgenero where gencodigo = @gencodigo;";
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = conexao;
                 cmd.CommandText = sql;
-                cmd.Parameters.Add("@autcodigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = autcodigo;
+                cmd.Parameters.Add("@gencodigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = autcodigo;
 
                 NpgsqlDataReader dr = cmd.ExecuteReader();
                 dr.Read();
@@ -136,7 +136,7 @@ namespace TrabalhoMarciel.controle
                 Console.WriteLine("Erro de sql: " + erro.Message);
             }
 
-            return autor;
+            return genero;
         }
     }
 }

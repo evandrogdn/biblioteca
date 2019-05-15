@@ -9,15 +9,15 @@ using TrabalhoMarciel.modelo;
 
 namespace TrabalhoMarciel.controle
 {
-    public class AutorDB
+    public class LivroDB
     {
-        public static ArrayList getAutors(NpgsqlConnection conexao)
+        public static ArrayList getLivros(NpgsqlConnection conexao)
         {
             ArrayList lista = new ArrayList();
 
             try
             {
-                string sql = "select * from tbautor order by autcodigo;";
+                string sql = "select * from tblivro order by livcodigo;";
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = conexao;
                 cmd.CommandText = sql;
@@ -25,13 +25,17 @@ namespace TrabalhoMarciel.controle
 
                 while (dr.Read())
                 {
-                    int autcodigo = (int)dr["autcodigo"];
-                    string autnome = (string)dr["autnome"];
+                    int livcodigo = (int)dr["livcodigo"];
+                    string livnome = (string)dr["livnome"];
+                    int localizacao = (int)dr["localizacao"];
+                    int genero = (int)dr["genero"];
 
-                    Autor Autor = new Autor();
-                    Autor.autcodigo = autcodigo;
-                    Autor.autnome = autnome;
-                    lista.Add(Autor);
+                    Livro livro = new Livro();
+                    livro.livcodigo = livcodigo;
+                    livro.livnome = livnome;
+                    livro.localizacao = localizacao;
+                    livro.genero = genero;
+                    lista.Add(livro);
                 }
 
                 dr.Close();
@@ -44,17 +48,19 @@ namespace TrabalhoMarciel.controle
             return lista;
         }
 
-        public static bool setIncluiAutor(NpgsqlConnection conexao, Autor autor)
+        public static bool setIncluiLivro(NpgsqlConnection conexao, Livro livro)
         {
             bool incluiu = false;
 
             try
             {
-                string sql = "insert into tbautor (autnome) values (@autnome);";
+                string sql = "insert into tblivro (livnome, localizacao, genero) values (@livnome, @localizacao, @genero);";
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = conexao;
                 cmd.CommandText = sql;
-                cmd.Parameters.Add("@autnome", NpgsqlTypes.NpgsqlDbType.Varchar).Value = autor.autnome;
+                cmd.Parameters.Add("@livnome", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livro.livnome;
+                cmd.Parameters.Add("@localizacao", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livro.localizacao;
+                cmd.Parameters.Add("@genero", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livro.genero;
 
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1) incluiu = true;
@@ -67,17 +73,17 @@ namespace TrabalhoMarciel.controle
             return incluiu;
         }
 
-        public static bool setExcluiAutor(NpgsqlConnection conexao, int autcodigo)
+        public static bool setExcluiLivro(NpgsqlConnection conexao, int livcodigo)
         {
             bool excluiu = false;
 
             try
             {
-                string sql = "delete from tbautor where autcodigo = @autcodigo;";
+                string sql = "delete from tblivro where livcodigo = @livcodigo;";
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = conexao;
                 cmd.CommandText = sql;
-                cmd.Parameters.Add("@autcodigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = autcodigo;
+                cmd.Parameters.Add("@livcodigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = livcodigo;
 
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1) excluiu = true;
@@ -90,19 +96,21 @@ namespace TrabalhoMarciel.controle
             return excluiu;
         }
 
-        public static bool setAlteraAutor(NpgsqlConnection conexao, Autor autor)
+        public static bool setAlteraLivro(NpgsqlConnection conexao, Livro livro)
         {
             bool alterou = false;
 
             try
             {
-                string sql = "update tbautor set autnome = @autnome where autcodigo = @autcodigo;";
+                string sql = "update tblivro set livnome = @livnome, localizacao = @localizacao, genero = @genero where livcodigo = @livcodigo;";
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = conexao;
                 cmd.CommandText = sql;
-                cmd.Parameters.Add("@autcodigo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = autor.autcodigo;
-                cmd.Parameters.Add("@autnome", NpgsqlTypes.NpgsqlDbType.Varchar).Value = autor.autnome;
-
+                cmd.Parameters.Add("@autcodigo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livro.livcodigo;
+                cmd.Parameters.Add("@livnome", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livro.livnome;
+                cmd.Parameters.Add("@localizacao", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livro.localizacao;
+                cmd.Parameters.Add("@genero", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livro.genero;
+                
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1) alterou = true;
             }
@@ -114,17 +122,17 @@ namespace TrabalhoMarciel.controle
             return alterou;
         }
 
-        public static Autor getAutor(NpgsqlConnection conexao, int autcodigo)
+        public static Livro getGenero(NpgsqlConnection conexao, int livcodigo)
         {
-            Autor autor = new Autor();
+            Livro livro = new Livro();
 
             try
             {
-                string sql = "select * from tbautor where autcodigo = @autcodigo;";
+                string sql = "select * from tblivro where livcodigo = @livcodigo;";
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = conexao;
                 cmd.CommandText = sql;
-                cmd.Parameters.Add("@autcodigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = autcodigo;
+                cmd.Parameters.Add("@livcodigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = livcodigo;
 
                 NpgsqlDataReader dr = cmd.ExecuteReader();
                 dr.Read();
@@ -136,7 +144,7 @@ namespace TrabalhoMarciel.controle
                 Console.WriteLine("Erro de sql: " + erro.Message);
             }
 
-            return autor;
+            return livro;
         }
     }
 }
