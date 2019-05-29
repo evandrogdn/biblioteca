@@ -69,7 +69,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controle\AutorDB.cs" />
     <Compile Include="controle\Conexao.cs" />
+    <Compile Include="controle\GeneroDB.cs" />
+    <Compile Include="controle\LivroDB.cs" />
+    <Compile Include="controle\LocalizacaoDB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
