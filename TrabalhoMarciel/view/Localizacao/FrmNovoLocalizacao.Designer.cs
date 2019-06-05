@@ -23,39 +23,41 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBoxSigla = new System.Windows.Forms.TextBox();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonConfirmar = new System.Windows.Forms.Button();
+            this.textBoxLocalizacao = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button2
+            // buttonCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(227, 76);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(181, 28);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Location = new System.Drawing.Point(227, 76);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(181, 28);
+            this.buttonCancelar.TabIndex = 43;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.ButtonCancelar_Click);
             // 
-            // button1
+            // buttonConfirmar
             // 
-            this.button1.Location = new System.Drawing.Point(25, 76);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 28);
-            this.button1.TabIndex = 42;
-            this.button1.Text = "Confirmar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonConfirmar.Location = new System.Drawing.Point(25, 76);
+            this.buttonConfirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonConfirmar.Name = "buttonConfirmar";
+            this.buttonConfirmar.Size = new System.Drawing.Size(194, 28);
+            this.buttonConfirmar.TabIndex = 42;
+            this.buttonConfirmar.Text = "Confirmar";
+            this.buttonConfirmar.UseVisualStyleBackColor = true;
+            this.buttonConfirmar.Click += new System.EventHandler(this.ButtonConfirmar_Click);
             // 
-            // textBoxSigla
+            // textBoxLocalizacao
             // 
-            this.textBoxSigla.Location = new System.Drawing.Point(25, 32);
-            this.textBoxSigla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBoxSigla.Name = "textBoxSigla";
-            this.textBoxSigla.Size = new System.Drawing.Size(383, 22);
-            this.textBoxSigla.TabIndex = 41;
+            this.textBoxLocalizacao.Location = new System.Drawing.Point(25, 32);
+            this.textBoxLocalizacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxLocalizacao.Name = "textBoxLocalizacao";
+            this.textBoxLocalizacao.Size = new System.Drawing.Size(383, 22);
+            this.textBoxLocalizacao.TabIndex = 41;
             // 
             // label1
             // 
@@ -71,10 +73,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 121);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBoxSigla);
+            this.ClientSize = new System.Drawing.Size(426, 121);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.buttonConfirmar);
+            this.Controls.Add(this.textBoxLocalizacao);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmNovoLocalizacao";
@@ -86,9 +88,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBoxSigla;
+        private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Button buttonConfirmar;
+        private System.Windows.Forms.TextBox textBoxLocalizacao;
         private System.Windows.Forms.Label label1;
     }
 }

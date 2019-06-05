@@ -38,6 +38,7 @@
             this.buttonCancelar.TabIndex = 47;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.ButtonCancelar_Click);
             // 
             // buttonConfirmar
             // 
@@ -48,6 +49,7 @@
             this.buttonConfirmar.TabIndex = 46;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
+            this.buttonConfirmar.Click += new System.EventHandler(this.ButtonConfirmar_Click);
             // 
             // textBoxNome
             // 
