@@ -81,6 +81,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="modelo\Autor.cs" />
+    <Compile Include="modelo\Consulta.cs" />
     <Compile Include="modelo\Genero.cs" />
     <Compile Include="modelo\Livro.cs" />
     <Compile Include="modelo\Localizacao.cs" />

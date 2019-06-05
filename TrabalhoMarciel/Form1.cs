@@ -12,7 +12,7 @@ using TrabalhoMarciel.controle;
 using TrabalhoMarciel.view.Autores;
 using TrabalhoMarciel.view.Generos;
 using TrabalhoMarciel.view.Livros;
-using TrabalhoMarciel.view.Localizacao;
+using TrabalhoMarciel.view.Localizacoes;
 
 namespace TrabalhoMarciel
 {

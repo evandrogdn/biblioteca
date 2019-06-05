@@ -1,5 +1,5 @@
-﻿namespace TrabalhoMarciel.view.Localizacao {
-    partial class FrmNovoLocalizacao {
+﻿namespace TrabalhoMarciel.view.Localizacoes {
+    partial class FrmAlteraLocalizacao {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -25,62 +25,62 @@
         private void InitializeComponent() {
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonConfirmar = new System.Windows.Forms.Button();
-            this.textBoxLocalizacao = new System.Windows.Forms.TextBox();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(227, 76);
+            this.buttonCancelar.Location = new System.Drawing.Point(221, 71);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(181, 28);
-            this.buttonCancelar.TabIndex = 43;
+            this.buttonCancelar.Size = new System.Drawing.Size(179, 28);
+            this.buttonCancelar.TabIndex = 47;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.ButtonCancelar_Click);
             // 
             // buttonConfirmar
             // 
-            this.buttonConfirmar.Location = new System.Drawing.Point(25, 76);
+            this.buttonConfirmar.Location = new System.Drawing.Point(13, 71);
             this.buttonConfirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonConfirmar.Name = "buttonConfirmar";
-            this.buttonConfirmar.Size = new System.Drawing.Size(194, 28);
-            this.buttonConfirmar.TabIndex = 42;
+            this.buttonConfirmar.Size = new System.Drawing.Size(200, 28);
+            this.buttonConfirmar.TabIndex = 46;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
             this.buttonConfirmar.Click += new System.EventHandler(this.ButtonConfirmar_Click);
             // 
-            // textBoxLocalizacao
+            // textBoxNome
             // 
-            this.textBoxLocalizacao.Location = new System.Drawing.Point(25, 32);
-            this.textBoxLocalizacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBoxLocalizacao.Name = "textBoxLocalizacao";
-            this.textBoxLocalizacao.Size = new System.Drawing.Size(383, 22);
-            this.textBoxLocalizacao.TabIndex = 41;
+            this.textBoxNome.Location = new System.Drawing.Point(17, 41);
+            this.textBoxNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(383, 22);
+            this.textBoxNome.TabIndex = 45;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 11);
+            this.label1.Location = new System.Drawing.Point(13, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 17);
-            this.label1.TabIndex = 40;
+            this.label1.TabIndex = 44;
             this.label1.Text = "Localização";
             // 
-            // FrmNovoLocalizacao
+            // FrmAlteraLocalizacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 121);
+            this.ClientSize = new System.Drawing.Size(414, 115);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonConfirmar);
-            this.Controls.Add(this.textBoxLocalizacao);
+            this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "FrmNovoLocalizacao";
-            this.Text = "[Cadastrando] localização";
+            this.Name = "FrmAlteraLocalizacao";
+            this.Text = "[Alterando] Localização";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,7 +90,7 @@
 
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonConfirmar;
-        private System.Windows.Forms.TextBox textBoxLocalizacao;
+        private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label label1;
     }
 }

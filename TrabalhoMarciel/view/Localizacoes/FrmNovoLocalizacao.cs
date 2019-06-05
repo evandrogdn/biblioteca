@@ -9,8 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabalhoMarciel.controle;
+using TrabalhoMarciel.modelo;
 
-namespace TrabalhoMarciel.view.Localizacao {
+namespace TrabalhoMarciel.view.Localizacoes {
     public partial class FrmNovoLocalizacao : Form {
         private NpgsqlConnection conexao = null;
 

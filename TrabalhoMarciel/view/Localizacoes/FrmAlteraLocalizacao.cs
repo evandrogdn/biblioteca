@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using TrabalhoMarciel.controle;
 using TrabalhoMarciel.modelo;
 
-namespace TrabalhoMarciel.view.Localizacao {
+namespace TrabalhoMarciel.view.Localizacoes {
     public partial class FrmAlteraLocalizacao : Form {
         private NpgsqlConnection conexao = null;
         private int codigoRegistro = 0;
@@ -25,16 +25,16 @@ namespace TrabalhoMarciel.view.Localizacao {
         
         private void buscaLocalizacao()
         {
-            Localizacao localizacao = LocalizacaoDB.getLocalizacao();
-            textBoxNome.Text = localizacao;
+            Localizacao localizacao = LocalizacaoDB.getLocalizacao(conexao, this.codigoRegistro);
+            textBoxNome.Text = localizacao.locnome;
         }
 
         private void ButtonConfirmar_Click(object sender, EventArgs e)
         {
             Localizacao localizacao = new Localizacao();
             localizacao.loccodigo = this.codigoRegistro;
-            localizacao.autnome = textBoxNome.Text;
-            bool alterou = AutorDB.setAlteraAutor(conexao, localizacao);
+            localizacao.locnome = textBoxNome.Text;
+            bool alterou = LocalizacaoDB.setAlteraLocalizacao(conexao, localizacao);
             if (alterou)
             {
                 MessageBox.Show("Registro Alterado!");

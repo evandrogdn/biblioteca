@@ -10,8 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabalhoMarciel.controle;
+using TrabalhoMarciel.modelo;
 
-namespace TrabalhoMarciel.view.Localizacao {
+namespace TrabalhoMarciel.view.Localizacoes {
     public partial class FrmLocalizacao : Form {
 
         private NpgsqlConnection conexao = null;
@@ -20,6 +21,9 @@ namespace TrabalhoMarciel.view.Localizacao {
             InitializeComponent();
 
             atualizaTela();
+            comboBoxCampo.SelectedIndex = 1;
+            comboBoxTipo.SelectedIndex = 0;
+            textBoxDescricao.Focus();
         }
 
         private void atualizaTela()
@@ -56,6 +60,23 @@ namespace TrabalhoMarciel.view.Localizacao {
             {
                 MessageBox.Show("Erro ao excluir  o registro!");
             }
+        }
+
+        private void consulta()
+        {
+            Consulta consulta = new Consulta();
+            switch (comboBoxCampo.SelectedIndex)
+            {
+                case 0:
+                    consulta.campo = "est_sigla";
+                    break;
+                default:
+                    consulta.campo = "nome";
+                    break;
+            }
+            consulta.tipo = comboBoxTipo.SelectedIndex;
+            consulta.descricao = textBoxDescricao.Text;
+            dataGridView1.DataSource = LocalizacaoDB.getLocalizacoes(conexao);
         }
     }
 }

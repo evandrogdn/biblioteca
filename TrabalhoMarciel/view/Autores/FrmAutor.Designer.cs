@@ -29,6 +29,12 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.autcodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxDescricao = new System.Windows.Forms.TextBox();
+            this.comboBoxTipo = new System.Windows.Forms.ComboBox();
+            this.comboBoxCampo = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,11 +96,83 @@
             this.nome.Name = "nome";
             this.nome.Width = 200;
             // 
+            // textBoxDescricao
+            // 
+            this.textBoxDescricao.Location = new System.Drawing.Point(234, 36);
+            this.textBoxDescricao.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDescricao.Name = "textBoxDescricao";
+            this.textBoxDescricao.Size = new System.Drawing.Size(263, 22);
+            this.textBoxDescricao.TabIndex = 17;
+            // 
+            // comboBoxTipo
+            // 
+            this.comboBoxTipo.FormattingEnabled = true;
+            this.comboBoxTipo.Items.AddRange(new object[] {
+            "Contém",
+            "Inicia com",
+            "Termina com",
+            ">=",
+            "<=",
+            "Igual"});
+            this.comboBoxTipo.Location = new System.Drawing.Point(126, 36);
+            this.comboBoxTipo.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxTipo.Name = "comboBoxTipo";
+            this.comboBoxTipo.Size = new System.Drawing.Size(99, 24);
+            this.comboBoxTipo.TabIndex = 16;
+            // 
+            // comboBoxCampo
+            // 
+            this.comboBoxCampo.FormattingEnabled = true;
+            this.comboBoxCampo.Items.AddRange(new object[] {
+            "Sigla",
+            "Nome"});
+            this.comboBoxCampo.Location = new System.Drawing.Point(18, 36);
+            this.comboBoxCampo.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxCampo.Name = "comboBoxCampo";
+            this.comboBoxCampo.Size = new System.Drawing.Size(99, 24);
+            this.comboBoxCampo.TabIndex = 15;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(230, 17);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 17);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Descrição";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(122, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 17);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Tipo";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Campo";
+            // 
             // FrmAutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 462);
+            this.Controls.Add(this.textBoxDescricao);
+            this.Controls.Add(this.comboBoxTipo);
+            this.Controls.Add(this.comboBoxCampo);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Alterar);
             this.Controls.Add(this.Excluir);
             this.Controls.Add(this.Novo);
@@ -104,6 +182,7 @@
             this.Text = "Autores";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -115,5 +194,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn autcodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.TextBox textBoxDescricao;
+        private System.Windows.Forms.ComboBox comboBoxTipo;
+        private System.Windows.Forms.ComboBox comboBoxCampo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
