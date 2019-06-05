@@ -11,7 +11,7 @@ namespace TrabalhoMarciel.controle
 {
     public class LocalizacaoDB
     {
-        public static ArrayList getGeneros(NpgsqlConnection conexao)
+        public static ArrayList getLocalizacoes(NpgsqlConnection conexao)
         {
             ArrayList lista = new ArrayList();
 
@@ -67,7 +67,7 @@ namespace TrabalhoMarciel.controle
             return incluiu;
         }
 
-        public static bool setExcluiGenero(NpgsqlConnection conexao, int loccodigo)
+        public static bool setExcluiLocalizacao(NpgsqlConnection conexao, int loccodigo)
         {
             bool excluiu = false;
 
@@ -90,7 +90,7 @@ namespace TrabalhoMarciel.controle
             return excluiu;
         }
 
-        public static bool setAlteraGenero(NpgsqlConnection conexao, Localizacao localizacao)
+        public static bool setAlteraLocalizacao(NpgsqlConnection conexao, Localizacao localizacao)
         {
             bool alterou = false;
 
@@ -114,7 +114,7 @@ namespace TrabalhoMarciel.controle
             return alterou;
         }
 
-        public static Localizacao getGenero(NpgsqlConnection conexao, int loccodigo)
+        public static Localizacao getLocalizacao(NpgsqlConnection conexao, int loccodigo)
         {
             Localizacao localizacao = new Localizacao();
 

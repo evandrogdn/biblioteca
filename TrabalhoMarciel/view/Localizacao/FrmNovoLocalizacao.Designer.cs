@@ -31,47 +31,52 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(502, 373);
+            this.button2.Location = new System.Drawing.Point(227, 76);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(223, 23);
+            this.button2.Size = new System.Drawing.Size(181, 28);
             this.button2.TabIndex = 43;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(79, 373);
+            this.button1.Location = new System.Drawing.Point(25, 76);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 23);
+            this.button1.Size = new System.Drawing.Size(194, 28);
             this.button1.TabIndex = 42;
             this.button1.Text = "Confirmar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBoxSigla
             // 
-            this.textBoxSigla.Location = new System.Drawing.Point(79, 72);
+            this.textBoxSigla.Location = new System.Drawing.Point(25, 32);
+            this.textBoxSigla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxSigla.Name = "textBoxSigla";
-            this.textBoxSigla.Size = new System.Drawing.Size(288, 20);
+            this.textBoxSigla.Size = new System.Drawing.Size(383, 22);
             this.textBoxSigla.TabIndex = 41;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(76, 55);
+            this.label1.Location = new System.Drawing.Point(22, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(83, 17);
             this.label1.TabIndex = 40;
             this.label1.Text = "Localização";
             // 
             // FrmNovoLocalizacao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(421, 121);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxSigla);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmNovoLocalizacao";
             this.Text = "[Cadastrando] localização";
             this.ResumeLayout(false);
