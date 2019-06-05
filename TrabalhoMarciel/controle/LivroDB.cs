@@ -54,13 +54,15 @@ namespace TrabalhoMarciel.controle
 
             try
             {
-                string sql = "insert into tblivro (livnome, localizacao, genero) values (@livnome, @localizacao, @genero);";
+                string sql = "insert into tblivro (livnome, localizacao, genero) values (@livnome, @localizacao, @genero, @autor);";
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = conexao;
                 cmd.CommandText = sql;
                 cmd.Parameters.Add("@livnome", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livro.livnome;
                 cmd.Parameters.Add("@localizacao", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livro.localizacao;
                 cmd.Parameters.Add("@genero", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livro.genero;
+                cmd.Parameters.Add("@autor", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livro.autor;
+
 
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1) incluiu = true;
