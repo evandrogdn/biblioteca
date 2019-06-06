@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabalhoMarciel.controle;
+using TrabalhoMarciel.modelo;
 
 namespace TrabalhoMarciel.view.Generos {
     public partial class FrmGenero : Form {
@@ -20,6 +21,9 @@ namespace TrabalhoMarciel.view.Generos {
             InitializeComponent();
 
             atualizaTela();
+            comboBoxCampo.SelectedIndex = 1;
+            comboBoxTipo.SelectedIndex = 0;
+            textBoxDescricao.Focus();
         }
 
         private void atualizaTela()
@@ -52,6 +56,32 @@ namespace TrabalhoMarciel.view.Generos {
                 atualizaTela();
             } else {
                 MessageBox.Show("Erro ao excluir o registro!");
+            }
+        }
+
+        private void Consulta()
+        {
+            Consulta consulta = new Consulta();
+            switch (comboBoxCampo.SelectedIndex)
+            {
+                case 0:
+                    consulta.campo = "gencodigo";
+                    break;
+                default:
+                    consulta.campo = "gennome";
+                    break;
+            }
+            consulta.tipo = comboBoxTipo.SelectedIndex;
+            consulta.descricao = textBoxDescricao.Text;
+            dataGridView1.DataSource = GeneroDB.getGeneros(conexao, consulta);
+        }
+
+        private void TextBoxDescricao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Se pressionado a tecla enter
+            if (e.KeyChar == (char)13)
+            {
+                Consulta();
             }
         }
     }

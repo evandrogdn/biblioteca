@@ -28,14 +28,8 @@ namespace TrabalhoMarciel.view.Livros {
         private void ButtonConfirmar_Click(object sender, EventArgs e)
         {
             string livnome = textBoxLivroNome.Text;
-            string livautor = comboBoxAutor.Text;
-            string livgenero = comboBoxGenero.Text;
-            string livlocalizacao = comboBoxLocalizacao.Text;
             Livro livro = new Livro();
             livro.livnome = livnome;
-            livro.autor = livautor;
-            livro.genero = livgenero;
-            livro.localizacao = livlocalizacao;
             bool alterou = LivroDB.setIncluiLivro(conexao, livro);
             if (alterou) {
                 MessageBox.Show("Registro Alterado!");

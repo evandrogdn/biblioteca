@@ -15,24 +15,23 @@ namespace TrabalhoMarciel.view.Generos {
     public partial class FrmAlteraGenero : Form {
 
         private NpgsqlConnection conexao = null;
-        private int codigoRegistro = 0;
         public FrmAlteraGenero(NpgsqlConnection conexao, int codigoRegistro) {
             this.conexao = conexao;
-            this.codigoRegistro = codigoRegistro;
             InitializeComponent();
+            textBoxCodigo.Text = Convert.ToString(codigoRegistro);
             buscaGenero();
         }
 
         private void buscaGenero()
         {
-            Genero genero = GeneroDB.getGenero(conexao, this.codigoRegistro);
+            Genero genero = GeneroDB.getGenero(conexao, Convert.ToInt32(textBoxCodigo.Text));
             textBoxGeneroNome.Text = genero.gennome;
         }
 
         private void ButtonConfirmar_Click(object sender, EventArgs e)
         {
             Genero genero = new Genero();
-            genero.gencodigo = this.codigoRegistro;
+            genero.gencodigo = int.Parse(textBoxCodigo.Text);
             genero.gennome = textBoxGeneroNome.Text;
             bool alterou = GeneroDB.setAlteraGenero(conexao, genero);
             if (alterou) {

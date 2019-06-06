@@ -62,21 +62,30 @@ namespace TrabalhoMarciel.view.Localizacoes {
             }
         }
 
-        private void consulta()
+        private void Consulta()
         {
             Consulta consulta = new Consulta();
             switch (comboBoxCampo.SelectedIndex)
             {
                 case 0:
-                    consulta.campo = "est_sigla";
+                    consulta.campo = "loccodigo";
                     break;
                 default:
-                    consulta.campo = "nome";
+                    consulta.campo = "locnome";
                     break;
             }
             consulta.tipo = comboBoxTipo.SelectedIndex;
             consulta.descricao = textBoxDescricao.Text;
-            dataGridView1.DataSource = LocalizacaoDB.getLocalizacoes(conexao);
+            dataGridView1.DataSource = LocalizacaoDB.getLocalizacoes(conexao, consulta);
+        }
+
+        private void TextBoxDescricao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Se pressionado a tecla enter
+            if (e.KeyChar == (char)13)
+            {
+                Consulta();
+            }
         }
     }
 }

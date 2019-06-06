@@ -10,10 +10,6 @@ namespace TrabalhoMarciel.modelo
     {
         public int livcodigo { get; set; }
         public string livnome { get; set; }
-        public string genero { get; set; }
-        public string localizacao { get; set;}
-
-        public string autor { get; set; }
 
         public string toString() => livnome;
     }

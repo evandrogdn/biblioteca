@@ -141,22 +141,22 @@
     <Compile Include="view\Livros\FrmNovoLivro.Designer.cs">
       <DependentUpon>FrmNovoLivro.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\Localizacao\FrmAlteraLocalizacao.cs">
+    <Compile Include="view\Localizacoes\FrmAlteraLocalizacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\Localizacao\FrmAlteraLocalizacao.Designer.cs">
+    <Compile Include="view\Localizacoes\FrmAlteraLocalizacao.Designer.cs">
       <DependentUpon>FrmAlteraLocalizacao.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\Localizacao\FrmLocalizacao.cs">
+    <Compile Include="view\Localizacoes\FrmLocalizacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\Localizacao\FrmLocalizacao.Designer.cs">
+    <Compile Include="view\Localizacoes\FrmLocalizacao.Designer.cs">
       <DependentUpon>FrmLocalizacao.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\Localizacao\FrmNovoLocalizacao.cs">
+    <Compile Include="view\Localizacoes\FrmNovoLocalizacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\Localizacao\FrmNovoLocalizacao.Designer.cs">
+    <Compile Include="view\Localizacoes\FrmNovoLocalizacao.Designer.cs">
       <DependentUpon>FrmNovoLocalizacao.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
@@ -198,13 +198,13 @@
     <EmbeddedResource Include="view\Livros\FrmNovoLivro.resx">
       <DependentUpon>FrmNovoLivro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\Localizacao\FrmAlteraLocalizacao.resx">
+    <EmbeddedResource Include="view\Localizacoes\FrmAlteraLocalizacao.resx">
       <DependentUpon>FrmAlteraLocalizacao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\Localizacao\FrmLocalizacao.resx">
+    <EmbeddedResource Include="view\Localizacoes\FrmLocalizacao.resx">
       <DependentUpon>FrmLocalizacao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\Localizacao\FrmNovoLocalizacao.resx">
+    <EmbeddedResource Include="view\Localizacoes\FrmNovoLocalizacao.resx">
       <DependentUpon>FrmNovoLocalizacao.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

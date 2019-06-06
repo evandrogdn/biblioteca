@@ -15,22 +15,18 @@ namespace TrabalhoMarciel.view.Livros {
     public partial class FrmAlteraLivro : Form {
 
         private NpgsqlConnection conexao = null;
-        private int codigoRegistro = 0;
         public FrmAlteraLivro(NpgsqlConnection conexao, int codigoRegistro) {
-            this.codigoRegistro = codigoRegistro;
             this.conexao = conexao;
             InitializeComponent();
 
+            textBoxCodigo.Text = Convert.ToString(codigoRegistro);
             buscaLivro();
         }
 
         private void buscaLivro()
         {
-            Livro livro = LivroDB.getGenero(conexao, this.codigoRegistro);
+            Livro livro = LivroDB.getGenero(conexao, Convert.ToInt32(textBoxCodigo.Text));
             textBoxNome.Text = livro.livnome;
-            comboBoxAutor.Text          = livro.autor;
-            comboBoxGenero.Text         = livro.genero;
-            comboBoxLocalizacao.Text    = livro.localizacao;
         }
 
         private void ButtonCancelar_Click(object sender, EventArgs e)
@@ -41,11 +37,8 @@ namespace TrabalhoMarciel.view.Livros {
         private void ButtonConfirmar_Click(object sender, EventArgs e)
         {
             Livro livro = new Livro();
-            livro.livcodigo = this.codigoRegistro;
+            livro.livcodigo = Convert.ToInt32(textBoxCodigo.Text);
             livro.livnome = textBoxNome.Text;
-            livro.autor = comboBoxAutor.Text;
-            livro.genero = comboBoxGenero.Text;
-            livro.localizacao = comboBoxLocalizacao.Text;
             bool alterou = LivroDB.setAlteraLivro(conexao, livro);
             if (alterou) {
                 MessageBox.Show("Registro Alterado!");

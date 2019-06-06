@@ -15,24 +15,24 @@ namespace TrabalhoMarciel.view.Autores {
     public partial class FrmAlteraAutor : Form {
 
         private NpgsqlConnection conexao = null;
-        private int codigoRegistro = 0;
         public FrmAlteraAutor(NpgsqlConnection conexao, int codigoRegistro) {
             this.conexao = conexao;
-            this.codigoRegistro = codigoRegistro;
             InitializeComponent();
+
+            textBoxCodigo.Text = codigoRegistro.ToString();
             buscaAutor();
         }
 
         private void buscaAutor()
         {
-            Autor autor = AutorDB.getAutor(conexao, this.codigoRegistro);
+            Autor autor = AutorDB.getAutor(conexao, int.Parse(textBoxCodigo.Text));
             textBoxAutorNome.Text = autor.autnome;
         }
 
         private void ButtonConfirmar_Click(object sender, EventArgs e)
         {
             Autor autor = new Autor();
-            autor.autcodigo = this.codigoRegistro;
+            autor.autcodigo = int.Parse(textBoxCodigo.Text);
             autor.autnome = textBoxAutorNome.Text;
             bool alterou = AutorDB.setAlteraAutor(conexao, autor);
             if (alterou)

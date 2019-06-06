@@ -104,6 +104,7 @@
             this.textBoxDescricao.Name = "textBoxDescricao";
             this.textBoxDescricao.Size = new System.Drawing.Size(263, 22);
             this.textBoxDescricao.TabIndex = 15;
+            this.textBoxDescricao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDescricao_KeyPress);
             // 
             // comboBoxTipo
             // 
@@ -125,7 +126,7 @@
             // 
             this.comboBoxCampo.FormattingEnabled = true;
             this.comboBoxCampo.Items.AddRange(new object[] {
-            "Sigla",
+            "Codigo",
             "Nome"});
             this.comboBoxCampo.Location = new System.Drawing.Point(21, 52);
             this.comboBoxCampo.Margin = new System.Windows.Forms.Padding(4);

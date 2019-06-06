@@ -41,7 +41,7 @@ namespace TrabalhoMarciel
 
         private void button1_Click(object sender, EventArgs e) {
             FrmLivro form = new FrmLivro(conexao);
-            form.showDialog();
+            form.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e) {

@@ -146,11 +146,11 @@ C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarc
 C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.view.Livros.FrmAlteraLivro.resources
 C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.view.Livros.FrmLivro.resources
 C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.view.Livros.FrmNovoLivro.resources
-C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.view.Localizacao.FrmAlteraLocalizacao.resources
-C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.view.Localizacao.FrmLocalizacao.resources
-C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.view.Localizacao.FrmNovoLocalizacao.resources
 C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.csproj.GenerateResource.cache
 C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.csproj.CoreCompileInputs.cache
 C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.csproj.CopyComplete
 C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.exe
 C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.pdb
+C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.view.Localizacoes.FrmAlteraLocalizacao.resources
+C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.view.Localizacoes.FrmLocalizacao.resources
+C:\Users\egard\Documents\POO-I\biblioteca\TrabalhoMarciel\obj\Debug\TrabalhoMarciel.view.Localizacoes.FrmNovoLocalizacao.resources
